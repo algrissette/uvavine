@@ -1,0 +1,7 @@
+POST http://localhost:3000/delete-comment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTJmZjg3YTVjZGI2ZTAzNDY3ZjE5YSIsImlhdCI6MTc0MDcwODMyN30.kgxJhOO3EQDhYtYkDs_lzTBXyhuYEBGYDJm9O1EloGs
+
+{
+  "_id": "67c0932b5c7554c2beb70209"
+}
