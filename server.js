@@ -24,7 +24,16 @@ server.use(express.json());
 
 
 //use cors to take in the data from front end 
-server.use(cors());
+server.use(
+  cors({
+    origin: ["https://your-netlify-site.netlify.app", "http://localhost:5174"], // Allow Netlify frontend & local dev
+    credentials: true, // Allow cookies/auth headers if needed
+    methods: "GET,POST,PUT,DELETE,OPTIONS",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
+
+server.options("*", cors()); // Handle preflight requests
 const PORT = 3000;
 
 
