@@ -26,7 +26,11 @@ server.use(express.json());
 //use cors to take in the data from front end 
 server.use(
   cors({
-    origin: ["sunny-sable-7db51d.netlify.app", "http://localhost:5174"], // Allow Netlify frontend & local dev
+    origin: [
+      "sunny-sable-7db51d.netlify.app", // Netlify frontend
+      "http://localhost:5174", // Local development
+      "https://uvavine.com", // Add uvavine.com
+    ],
     credentials: true, // Allow cookies/auth headers if needed
     methods: "GET,POST,PUT,DELETE,OPTIONS",
     allowedHeaders: "Content-Type,Authorization",
